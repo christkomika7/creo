@@ -5,7 +5,7 @@ export const sidebar = [
         id: 1,
         icon: LayoutDashboardIcon,
         title: "Tableau de bord",
-        path: "/dashboard/"
+        path: "/dashboard"
     },
     {
         id: 2,

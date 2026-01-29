@@ -3,6 +3,7 @@ import { Button } from "../../../components/ui/button"
 import { LogOutIcon } from "lucide-react"
 
 import Logo from "../../../assets/emerald-logo.png"
+import { Link } from "@tanstack/react-router"
 
 
 export default function Sidebar() {
@@ -16,10 +17,10 @@ export default function Sidebar() {
                 <ul className="py-4 px-3">
                     {sidebar.map((item) => (
                         <li key={item.id} className="mb-1">
-                            <a href={item.path} className="flex items-center px-3 py-2 rounded-md hover:bg-emerald-background hover:text-white">
+                            <Link to={item.path} className="flex items-center px-3 py-2 rounded-md hover:bg-emerald-background hover:text-white">
                                 <item.icon className="size-4 mr-3" />
                                 <span className="text-xs">{item.title}</span>
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>

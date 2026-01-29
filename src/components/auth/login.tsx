@@ -16,9 +16,11 @@ import { Label } from "../ui/label";
 import { MailIcon, LockKeyholeIcon } from "lucide-react";
 import { Input } from "../ui/input";
 import { Spinner } from "../ui/spinner";
+import { useRouter } from "@tanstack/react-router";
 
 export default function Login() {
     const [isLoading, setIsLoading] = useState(false);
+    const router = useRouter();
 
     const form = useForm<LoginSchema>({
         resolver: zodResolver(loginSchema),
@@ -32,7 +34,7 @@ export default function Login() {
         const { success, data } = loginSchema.safeParse(formData);
         if (success) {
             setIsLoading(true);
-            console.log({ data });
+            router.navigate({ to: "/dashboard" })
         }
     }
     return (

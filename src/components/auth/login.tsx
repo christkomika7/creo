@@ -31,7 +31,7 @@ export default function Login() {
     });
 
     async function submit(formData: LoginSchema) {
-        const { success, data } = loginSchema.safeParse(formData);
+        const { success } = loginSchema.safeParse(formData);
         if (success) {
             setIsLoading(true);
             router.navigate({ to: "/dashboard" })

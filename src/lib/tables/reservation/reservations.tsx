@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
 import type { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDownIcon, Edit3Icon, EyeIcon, Trash2Icon } from "lucide-react";
-import { Status, StatusLabel } from "@/components/ui/status";
 
 type KeyType = 'id' | 'prospect' | 'unit' | 'startDate' | 'rent' | 'charges' | 'createdAt';
 

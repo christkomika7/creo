@@ -372,7 +372,7 @@ export default function CreateBuilding() {
                         <FormField
                             control={form.control}
                             name="map"
-                            render={({ field }) => (
+                            render={() => (
                                 <FormItem >
                                     <FormLabel className="text-neutral-600">Google map</FormLabel>
                                     <FormControl>

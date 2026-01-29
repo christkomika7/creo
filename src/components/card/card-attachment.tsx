@@ -8,7 +8,7 @@ type CardAttachmentProps = {
 
 export default function CardAttachment({ id, title }: CardAttachmentProps) {
   return (
-    <div className="bg-white rounded-md p-4 shadow-md shadow-neutral-300/10 flex justify-between items-center">
+    <div key={id} className="bg-white rounded-md p-4 shadow-md shadow-neutral-300/10 flex justify-between items-center">
       <div className="space-x-1 text-neutral-600 flex items-center">
         <span className="size-8 flex justify-center items-center"><FileTextIcon /></span>
         <p className="text-sm">{title}</p>

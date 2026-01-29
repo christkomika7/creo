@@ -1,0 +1,17 @@
+import { useLocation } from "@tanstack/react-router";
+import { useState } from "react";
+
+export function useBreadcrumb() {
+    const [breadcrumb, setBreadcrumb] = useState<{ paths: string[], length: number }>({
+        paths: [],
+        length: 0
+    });
+    const location = useLocation();
+    const paths = location.pathname.split("/").filter(Boolean).slice(1);
+    setBreadcrumb({
+        paths,
+        length: paths.length
+    })
+
+    return breadcrumb;
+}

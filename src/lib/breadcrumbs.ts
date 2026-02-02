@@ -62,7 +62,7 @@ export const breadcrumbs: Record<BreadcrumbKey, string> = {
     'view_invoice': "Information sur la facture",
 
     // Reservations
-    'contracts': "Gestion des contrats",
+    'contracts': "Contracts/Mandates",
     'new-contract': "Nouveau contrat",
     'edit_contract': "Modification du contrat",
     'view_contract': "Information du contrat",

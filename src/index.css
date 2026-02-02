@@ -83,6 +83,9 @@
   --sidebar-ring: oklch(0.708 0 0);
   --card-purple: oklch(97.244% 0.01491 356.19);
   --card-blue: oklch(96.492% 0.01743 285.984);
+  --card-orange: oklch(98.855% 0.03511 103.605);
+  --card-red: oklch(97.49% 0.01248 35.316);
+  --card-green: oklch(98.367% 0.02555 151.01);
   --card-lime: oklch(97.331% 0.03637 132.762);
   --card-sky: oklch(95.983% 0.0234 232.009);
   --card-pink: oklch(94.467% 0.04105 334.456);

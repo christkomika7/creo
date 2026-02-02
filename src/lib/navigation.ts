@@ -53,7 +53,7 @@ export const sidebar = [
         id: 9,
         icon: ReceiptTextIcon,
         title: "Facturation",
-        path: "/dashboard/invoicing"
+        path: "/dashboard/invoices"
     },
     {
         id: 10,

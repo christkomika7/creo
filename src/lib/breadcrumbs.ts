@@ -5,7 +5,9 @@ export type BreadcrumbKey =
     "units" | "new-unit" | "edit_unit" | "view_unit" |
     "rentals" | "new-rental" | "edit_rental" | "view_rental" |
     "reservations" | "new-reservation" | "edit_reservation" | "view_reservation" |
-    "property-management" | "new-property" | "edit_property" | "view_property";
+    "property-management" | "new-property" | "edit_property" | "view_property" |
+    "invoices" | "new-invoice" | "edit_invoice" | "view_invoice" |
+    "contracts" | "new-contract" | "edit_contract" | "view_contract";
 
 
 
@@ -52,4 +54,16 @@ export const breadcrumbs: Record<BreadcrumbKey, string> = {
     'new-property': "Nouveau bien",
     'edit_property': "Modification du bien",
     'view_property': "Profil du bien",
+
+    // Reservations
+    'invoices': "Gestion des factures",
+    'new-invoice': "Nouvelle facture",
+    'edit_invoice': "Modification de la facture",
+    'view_invoice': "Information sur la facture",
+
+    // Reservations
+    'contracts': "Gestion des contrats",
+    'new-contract': "Nouveau contrat",
+    'edit_contract': "Modification du contrat",
+    'view_contract': "Information du contrat",
 }

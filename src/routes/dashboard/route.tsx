@@ -16,7 +16,7 @@ function Dashboard() {
                 <header className="sticky top-0">
                     <Navbar />
                 </header>
-                <main className="flex-1 overflow-y-auto p-6">
+                <main className="flex-1 overflow-y-auto p-6 max-w-340 w-full mx-auto">
                     <Outlet />
                 </main>
             </div>

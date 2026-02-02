@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { MAX_FILE_SIZE } from "../constant";
+import { ALLOWED_TYPES, MAX_FILE_SIZE } from "../constant";
 
 export const ownerSchema = z.object({
     reference: z.string({ error: "La référence est requise." }),
@@ -16,7 +16,7 @@ export const ownerSchema = z.object({
         z
             .instanceof(File)
             .refine(
-                (file) => file.type === "application/pdf",
+                (file) => ALLOWED_TYPES.includes(file.type),
                 "Seuls les fichiers PDF et images sont autorisés"
             )
             .refine(

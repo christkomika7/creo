@@ -19,7 +19,6 @@ import { Route as DashboardRentalsIndexRouteImport } from './routes/dashboard/re
 import { Route as DashboardPropertyManagementIndexRouteImport } from './routes/dashboard/property-management/index'
 import { Route as DashboardOwnersIndexRouteImport } from './routes/dashboard/owners/index'
 import { Route as DashboardInvoicesIndexRouteImport } from './routes/dashboard/invoices/index'
-import { Route as DashboardContractsIndexRouteImport } from './routes/dashboard/contracts/index'
 import { Route as DashboardBuildingsIndexRouteImport } from './routes/dashboard/buildings/index'
 import { Route as DashboardUnitsNewUnitRouteImport } from './routes/dashboard/units/new-unit'
 import { Route as DashboardUnitsIdRouteImport } from './routes/dashboard/units/$id'
@@ -35,8 +34,6 @@ import { Route as DashboardOwnersNewOwnerRouteImport } from './routes/dashboard/
 import { Route as DashboardOwnersIdRouteImport } from './routes/dashboard/owners/$id'
 import { Route as DashboardInvoicesNewInvoiceRouteImport } from './routes/dashboard/invoices/new-invoice'
 import { Route as DashboardInvoicesIdRouteImport } from './routes/dashboard/invoices/$id'
-import { Route as DashboardContractsNewContractRouteImport } from './routes/dashboard/contracts/new-contract'
-import { Route as DashboardContractsIdRouteImport } from './routes/dashboard/contracts/$id'
 import { Route as DashboardBuildingsNewBuildingRouteImport } from './routes/dashboard/buildings/new-building'
 import { Route as DashboardBuildingsIdRouteImport } from './routes/dashboard/buildings/$id'
 import { Route as DashboardUnitsEditUnitIdRouteImport } from './routes/dashboard/units/edit-unit.$id'
@@ -46,7 +43,6 @@ import { Route as DashboardRentalsEditRentalIdRouteImport } from './routes/dashb
 import { Route as DashboardPropertyManagementEditPropertyIdRouteImport } from './routes/dashboard/property-management/edit-property.$id'
 import { Route as DashboardOwnersEditOwnerIdRouteImport } from './routes/dashboard/owners/edit-owner.$id'
 import { Route as DashboardInvoicesEditInvoiceIdRouteImport } from './routes/dashboard/invoices/edit-invoice.$id'
-import { Route as DashboardContractsEditContractIdRouteImport } from './routes/dashboard/contracts/edit-contract.$id'
 import { Route as DashboardBuildingsEditBuildingIdRouteImport } from './routes/dashboard/buildings/edit-building.$id'
 
 const DashboardRouteRoute = DashboardRouteRouteImport.update({
@@ -99,11 +95,6 @@ const DashboardOwnersIndexRoute = DashboardOwnersIndexRouteImport.update({
 const DashboardInvoicesIndexRoute = DashboardInvoicesIndexRouteImport.update({
   id: '/invoices/',
   path: '/invoices/',
-  getParentRoute: () => DashboardRouteRoute,
-} as any)
-const DashboardContractsIndexRoute = DashboardContractsIndexRouteImport.update({
-  id: '/contracts/',
-  path: '/contracts/',
   getParentRoute: () => DashboardRouteRoute,
 } as any)
 const DashboardBuildingsIndexRoute = DashboardBuildingsIndexRouteImport.update({
@@ -187,17 +178,6 @@ const DashboardInvoicesIdRoute = DashboardInvoicesIdRouteImport.update({
   path: '/invoices/$id',
   getParentRoute: () => DashboardRouteRoute,
 } as any)
-const DashboardContractsNewContractRoute =
-  DashboardContractsNewContractRouteImport.update({
-    id: '/contracts/new-contract',
-    path: '/contracts/new-contract',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardContractsIdRoute = DashboardContractsIdRouteImport.update({
-  id: '/contracts/$id',
-  path: '/contracts/$id',
-  getParentRoute: () => DashboardRouteRoute,
-} as any)
 const DashboardBuildingsNewBuildingRoute =
   DashboardBuildingsNewBuildingRouteImport.update({
     id: '/buildings/new-building',
@@ -251,12 +231,6 @@ const DashboardInvoicesEditInvoiceIdRoute =
     path: '/invoices/edit-invoice/$id',
     getParentRoute: () => DashboardRouteRoute,
   } as any)
-const DashboardContractsEditContractIdRoute =
-  DashboardContractsEditContractIdRouteImport.update({
-    id: '/contracts/edit-contract/$id',
-    path: '/contracts/edit-contract/$id',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
 const DashboardBuildingsEditBuildingIdRoute =
   DashboardBuildingsEditBuildingIdRouteImport.update({
     id: '/buildings/edit-building/$id',
@@ -270,8 +244,6 @@ export interface FileRoutesByFullPath {
   '/dashboard/': typeof DashboardIndexRoute
   '/dashboard/buildings/$id': typeof DashboardBuildingsIdRoute
   '/dashboard/buildings/new-building': typeof DashboardBuildingsNewBuildingRoute
-  '/dashboard/contracts/$id': typeof DashboardContractsIdRoute
-  '/dashboard/contracts/new-contract': typeof DashboardContractsNewContractRoute
   '/dashboard/invoices/$id': typeof DashboardInvoicesIdRoute
   '/dashboard/invoices/new-invoice': typeof DashboardInvoicesNewInvoiceRoute
   '/dashboard/owners/$id': typeof DashboardOwnersIdRoute
@@ -287,7 +259,6 @@ export interface FileRoutesByFullPath {
   '/dashboard/units/$id': typeof DashboardUnitsIdRoute
   '/dashboard/units/new-unit': typeof DashboardUnitsNewUnitRoute
   '/dashboard/buildings': typeof DashboardBuildingsIndexRoute
-  '/dashboard/contracts': typeof DashboardContractsIndexRoute
   '/dashboard/invoices': typeof DashboardInvoicesIndexRoute
   '/dashboard/owners': typeof DashboardOwnersIndexRoute
   '/dashboard/property-management': typeof DashboardPropertyManagementIndexRoute
@@ -296,7 +267,6 @@ export interface FileRoutesByFullPath {
   '/dashboard/tenants': typeof DashboardTenantsIndexRoute
   '/dashboard/units': typeof DashboardUnitsIndexRoute
   '/dashboard/buildings/edit-building/$id': typeof DashboardBuildingsEditBuildingIdRoute
-  '/dashboard/contracts/edit-contract/$id': typeof DashboardContractsEditContractIdRoute
   '/dashboard/invoices/edit-invoice/$id': typeof DashboardInvoicesEditInvoiceIdRoute
   '/dashboard/owners/edit-owner/$id': typeof DashboardOwnersEditOwnerIdRoute
   '/dashboard/property-management/edit-property/$id': typeof DashboardPropertyManagementEditPropertyIdRoute
@@ -310,8 +280,6 @@ export interface FileRoutesByTo {
   '/dashboard': typeof DashboardIndexRoute
   '/dashboard/buildings/$id': typeof DashboardBuildingsIdRoute
   '/dashboard/buildings/new-building': typeof DashboardBuildingsNewBuildingRoute
-  '/dashboard/contracts/$id': typeof DashboardContractsIdRoute
-  '/dashboard/contracts/new-contract': typeof DashboardContractsNewContractRoute
   '/dashboard/invoices/$id': typeof DashboardInvoicesIdRoute
   '/dashboard/invoices/new-invoice': typeof DashboardInvoicesNewInvoiceRoute
   '/dashboard/owners/$id': typeof DashboardOwnersIdRoute
@@ -327,7 +295,6 @@ export interface FileRoutesByTo {
   '/dashboard/units/$id': typeof DashboardUnitsIdRoute
   '/dashboard/units/new-unit': typeof DashboardUnitsNewUnitRoute
   '/dashboard/buildings': typeof DashboardBuildingsIndexRoute
-  '/dashboard/contracts': typeof DashboardContractsIndexRoute
   '/dashboard/invoices': typeof DashboardInvoicesIndexRoute
   '/dashboard/owners': typeof DashboardOwnersIndexRoute
   '/dashboard/property-management': typeof DashboardPropertyManagementIndexRoute
@@ -336,7 +303,6 @@ export interface FileRoutesByTo {
   '/dashboard/tenants': typeof DashboardTenantsIndexRoute
   '/dashboard/units': typeof DashboardUnitsIndexRoute
   '/dashboard/buildings/edit-building/$id': typeof DashboardBuildingsEditBuildingIdRoute
-  '/dashboard/contracts/edit-contract/$id': typeof DashboardContractsEditContractIdRoute
   '/dashboard/invoices/edit-invoice/$id': typeof DashboardInvoicesEditInvoiceIdRoute
   '/dashboard/owners/edit-owner/$id': typeof DashboardOwnersEditOwnerIdRoute
   '/dashboard/property-management/edit-property/$id': typeof DashboardPropertyManagementEditPropertyIdRoute
@@ -352,8 +318,6 @@ export interface FileRoutesById {
   '/dashboard/': typeof DashboardIndexRoute
   '/dashboard/buildings/$id': typeof DashboardBuildingsIdRoute
   '/dashboard/buildings/new-building': typeof DashboardBuildingsNewBuildingRoute
-  '/dashboard/contracts/$id': typeof DashboardContractsIdRoute
-  '/dashboard/contracts/new-contract': typeof DashboardContractsNewContractRoute
   '/dashboard/invoices/$id': typeof DashboardInvoicesIdRoute
   '/dashboard/invoices/new-invoice': typeof DashboardInvoicesNewInvoiceRoute
   '/dashboard/owners/$id': typeof DashboardOwnersIdRoute
@@ -369,7 +333,6 @@ export interface FileRoutesById {
   '/dashboard/units/$id': typeof DashboardUnitsIdRoute
   '/dashboard/units/new-unit': typeof DashboardUnitsNewUnitRoute
   '/dashboard/buildings/': typeof DashboardBuildingsIndexRoute
-  '/dashboard/contracts/': typeof DashboardContractsIndexRoute
   '/dashboard/invoices/': typeof DashboardInvoicesIndexRoute
   '/dashboard/owners/': typeof DashboardOwnersIndexRoute
   '/dashboard/property-management/': typeof DashboardPropertyManagementIndexRoute
@@ -378,7 +341,6 @@ export interface FileRoutesById {
   '/dashboard/tenants/': typeof DashboardTenantsIndexRoute
   '/dashboard/units/': typeof DashboardUnitsIndexRoute
   '/dashboard/buildings/edit-building/$id': typeof DashboardBuildingsEditBuildingIdRoute
-  '/dashboard/contracts/edit-contract/$id': typeof DashboardContractsEditContractIdRoute
   '/dashboard/invoices/edit-invoice/$id': typeof DashboardInvoicesEditInvoiceIdRoute
   '/dashboard/owners/edit-owner/$id': typeof DashboardOwnersEditOwnerIdRoute
   '/dashboard/property-management/edit-property/$id': typeof DashboardPropertyManagementEditPropertyIdRoute
@@ -395,8 +357,6 @@ export interface FileRouteTypes {
     | '/dashboard/'
     | '/dashboard/buildings/$id'
     | '/dashboard/buildings/new-building'
-    | '/dashboard/contracts/$id'
-    | '/dashboard/contracts/new-contract'
     | '/dashboard/invoices/$id'
     | '/dashboard/invoices/new-invoice'
     | '/dashboard/owners/$id'
@@ -412,7 +372,6 @@ export interface FileRouteTypes {
     | '/dashboard/units/$id'
     | '/dashboard/units/new-unit'
     | '/dashboard/buildings'
-    | '/dashboard/contracts'
     | '/dashboard/invoices'
     | '/dashboard/owners'
     | '/dashboard/property-management'
@@ -421,7 +380,6 @@ export interface FileRouteTypes {
     | '/dashboard/tenants'
     | '/dashboard/units'
     | '/dashboard/buildings/edit-building/$id'
-    | '/dashboard/contracts/edit-contract/$id'
     | '/dashboard/invoices/edit-invoice/$id'
     | '/dashboard/owners/edit-owner/$id'
     | '/dashboard/property-management/edit-property/$id'
@@ -435,8 +393,6 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/dashboard/buildings/$id'
     | '/dashboard/buildings/new-building'
-    | '/dashboard/contracts/$id'
-    | '/dashboard/contracts/new-contract'
     | '/dashboard/invoices/$id'
     | '/dashboard/invoices/new-invoice'
     | '/dashboard/owners/$id'
@@ -452,7 +408,6 @@ export interface FileRouteTypes {
     | '/dashboard/units/$id'
     | '/dashboard/units/new-unit'
     | '/dashboard/buildings'
-    | '/dashboard/contracts'
     | '/dashboard/invoices'
     | '/dashboard/owners'
     | '/dashboard/property-management'
@@ -461,7 +416,6 @@ export interface FileRouteTypes {
     | '/dashboard/tenants'
     | '/dashboard/units'
     | '/dashboard/buildings/edit-building/$id'
-    | '/dashboard/contracts/edit-contract/$id'
     | '/dashboard/invoices/edit-invoice/$id'
     | '/dashboard/owners/edit-owner/$id'
     | '/dashboard/property-management/edit-property/$id'
@@ -476,8 +430,6 @@ export interface FileRouteTypes {
     | '/dashboard/'
     | '/dashboard/buildings/$id'
     | '/dashboard/buildings/new-building'
-    | '/dashboard/contracts/$id'
-    | '/dashboard/contracts/new-contract'
     | '/dashboard/invoices/$id'
     | '/dashboard/invoices/new-invoice'
     | '/dashboard/owners/$id'
@@ -493,7 +445,6 @@ export interface FileRouteTypes {
     | '/dashboard/units/$id'
     | '/dashboard/units/new-unit'
     | '/dashboard/buildings/'
-    | '/dashboard/contracts/'
     | '/dashboard/invoices/'
     | '/dashboard/owners/'
     | '/dashboard/property-management/'
@@ -502,7 +453,6 @@ export interface FileRouteTypes {
     | '/dashboard/tenants/'
     | '/dashboard/units/'
     | '/dashboard/buildings/edit-building/$id'
-    | '/dashboard/contracts/edit-contract/$id'
     | '/dashboard/invoices/edit-invoice/$id'
     | '/dashboard/owners/edit-owner/$id'
     | '/dashboard/property-management/edit-property/$id'
@@ -587,13 +537,6 @@ declare module '@tanstack/react-router' {
       path: '/invoices'
       fullPath: '/dashboard/invoices'
       preLoaderRoute: typeof DashboardInvoicesIndexRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/contracts/': {
-      id: '/dashboard/contracts/'
-      path: '/contracts'
-      fullPath: '/dashboard/contracts'
-      preLoaderRoute: typeof DashboardContractsIndexRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
     '/dashboard/buildings/': {
@@ -701,20 +644,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardInvoicesIdRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
-    '/dashboard/contracts/new-contract': {
-      id: '/dashboard/contracts/new-contract'
-      path: '/contracts/new-contract'
-      fullPath: '/dashboard/contracts/new-contract'
-      preLoaderRoute: typeof DashboardContractsNewContractRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/contracts/$id': {
-      id: '/dashboard/contracts/$id'
-      path: '/contracts/$id'
-      fullPath: '/dashboard/contracts/$id'
-      preLoaderRoute: typeof DashboardContractsIdRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
     '/dashboard/buildings/new-building': {
       id: '/dashboard/buildings/new-building'
       path: '/buildings/new-building'
@@ -778,13 +707,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardInvoicesEditInvoiceIdRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
-    '/dashboard/contracts/edit-contract/$id': {
-      id: '/dashboard/contracts/edit-contract/$id'
-      path: '/contracts/edit-contract/$id'
-      fullPath: '/dashboard/contracts/edit-contract/$id'
-      preLoaderRoute: typeof DashboardContractsEditContractIdRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
     '/dashboard/buildings/edit-building/$id': {
       id: '/dashboard/buildings/edit-building/$id'
       path: '/buildings/edit-building/$id'
@@ -799,8 +721,6 @@ interface DashboardRouteRouteChildren {
   DashboardIndexRoute: typeof DashboardIndexRoute
   DashboardBuildingsIdRoute: typeof DashboardBuildingsIdRoute
   DashboardBuildingsNewBuildingRoute: typeof DashboardBuildingsNewBuildingRoute
-  DashboardContractsIdRoute: typeof DashboardContractsIdRoute
-  DashboardContractsNewContractRoute: typeof DashboardContractsNewContractRoute
   DashboardInvoicesIdRoute: typeof DashboardInvoicesIdRoute
   DashboardInvoicesNewInvoiceRoute: typeof DashboardInvoicesNewInvoiceRoute
   DashboardOwnersIdRoute: typeof DashboardOwnersIdRoute
@@ -816,7 +736,6 @@ interface DashboardRouteRouteChildren {
   DashboardUnitsIdRoute: typeof DashboardUnitsIdRoute
   DashboardUnitsNewUnitRoute: typeof DashboardUnitsNewUnitRoute
   DashboardBuildingsIndexRoute: typeof DashboardBuildingsIndexRoute
-  DashboardContractsIndexRoute: typeof DashboardContractsIndexRoute
   DashboardInvoicesIndexRoute: typeof DashboardInvoicesIndexRoute
   DashboardOwnersIndexRoute: typeof DashboardOwnersIndexRoute
   DashboardPropertyManagementIndexRoute: typeof DashboardPropertyManagementIndexRoute
@@ -825,7 +744,6 @@ interface DashboardRouteRouteChildren {
   DashboardTenantsIndexRoute: typeof DashboardTenantsIndexRoute
   DashboardUnitsIndexRoute: typeof DashboardUnitsIndexRoute
   DashboardBuildingsEditBuildingIdRoute: typeof DashboardBuildingsEditBuildingIdRoute
-  DashboardContractsEditContractIdRoute: typeof DashboardContractsEditContractIdRoute
   DashboardInvoicesEditInvoiceIdRoute: typeof DashboardInvoicesEditInvoiceIdRoute
   DashboardOwnersEditOwnerIdRoute: typeof DashboardOwnersEditOwnerIdRoute
   DashboardPropertyManagementEditPropertyIdRoute: typeof DashboardPropertyManagementEditPropertyIdRoute
@@ -839,8 +757,6 @@ const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardIndexRoute: DashboardIndexRoute,
   DashboardBuildingsIdRoute: DashboardBuildingsIdRoute,
   DashboardBuildingsNewBuildingRoute: DashboardBuildingsNewBuildingRoute,
-  DashboardContractsIdRoute: DashboardContractsIdRoute,
-  DashboardContractsNewContractRoute: DashboardContractsNewContractRoute,
   DashboardInvoicesIdRoute: DashboardInvoicesIdRoute,
   DashboardInvoicesNewInvoiceRoute: DashboardInvoicesNewInvoiceRoute,
   DashboardOwnersIdRoute: DashboardOwnersIdRoute,
@@ -858,7 +774,6 @@ const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardUnitsIdRoute: DashboardUnitsIdRoute,
   DashboardUnitsNewUnitRoute: DashboardUnitsNewUnitRoute,
   DashboardBuildingsIndexRoute: DashboardBuildingsIndexRoute,
-  DashboardContractsIndexRoute: DashboardContractsIndexRoute,
   DashboardInvoicesIndexRoute: DashboardInvoicesIndexRoute,
   DashboardOwnersIndexRoute: DashboardOwnersIndexRoute,
   DashboardPropertyManagementIndexRoute: DashboardPropertyManagementIndexRoute,
@@ -867,7 +782,6 @@ const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardTenantsIndexRoute: DashboardTenantsIndexRoute,
   DashboardUnitsIndexRoute: DashboardUnitsIndexRoute,
   DashboardBuildingsEditBuildingIdRoute: DashboardBuildingsEditBuildingIdRoute,
-  DashboardContractsEditContractIdRoute: DashboardContractsEditContractIdRoute,
   DashboardInvoicesEditInvoiceIdRoute: DashboardInvoicesEditInvoiceIdRoute,
   DashboardOwnersEditOwnerIdRoute: DashboardOwnersEditOwnerIdRoute,
   DashboardPropertyManagementEditPropertyIdRoute:

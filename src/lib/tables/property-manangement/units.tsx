@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import type { ColumnDef } from "@tanstack/react-table";
-import { ArrowUpDownIcon, EyeIcon } from "lucide-react";
+import { ArrowUpDownIcon, EyeIcon, FileDownIcon } from "lucide-react";
 import {
     Status,
     StatusIndicator,
@@ -151,7 +151,9 @@ export const columns: ColumnDef<Record<KeyType, string | number | Date>>[] = [
             return (
                 <div className="flex gap-x-2">
                     <Button variant="secondary" className="size-7.5 rounded-lg"><EyeIcon className="size-3.5" /></Button>
-                    <ExportTo />
+                    <ExportTo title="Relevé" >
+                        <Button variant="amber" className="size-7.5 rounded-lg"><FileDownIcon className="size-3.5" /></Button>
+                    </ExportTo>
                 </div>
             )
 

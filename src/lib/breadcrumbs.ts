@@ -7,7 +7,9 @@ export type BreadcrumbKey =
     "reservations" | "new-reservation" | "edit_reservation" | "view_reservation" |
     "property-management" | "new-property" | "edit_property" | "view_property" |
     "invoices" | "new-invoice" | "edit_invoice" | "view_invoice" |
-    "contracts" | "new-contract" | "edit_contract" | "view_contract";
+    "contracts" | "new-contract" | "edit_contract" | "view_contract" |
+    "reports" | "new-report" | "edit_report" | "view_report" |
+    "accounting" | "new-accounting" | "edit_accounting" | "view_accounting";
 
 
 
@@ -49,21 +51,33 @@ export const breadcrumbs: Record<BreadcrumbKey, string> = {
     'edit_reservation': "Modification de la reservation",
     'view_reservation': "Profil de la reservation",
 
-    // Reservations
+    // Property Management
     'property-management': "Gestion des biens",
     'new-property': "Nouveau bien",
     'edit_property': "Modification du bien",
     'view_property': "Profil du bien",
 
-    // Reservations
+    // Invoices
     'invoices': "Gestion des factures",
     'new-invoice': "Nouvelle facture",
     'edit_invoice': "Modification de la facture",
     'view_invoice': "Information sur la facture",
 
-    // Reservations
+    // Contracts
     'contracts': "Contracts/Mandates",
     'new-contract': "Nouveau contrat",
     'edit_contract': "Modification du contrat",
     'view_contract': "Information du contrat",
+
+    // Reports
+    'reports': "Point de suivi & Nos rapports",
+    'new-report': "Nouveau point de suivi & rapports",
+    'edit_report': "Modification du point de suivi & rapports",
+    'view_report': "Information sur le point de suivi & rapports",
+
+    // Accounting
+    'accounting': "Comptabilité",
+    'new-accounting': "Nouvelle comptabilité",
+    'edit_accounting': "Modification de la comptabilité",
+    'view_accounting': "Information sur la comptabilité",
 }

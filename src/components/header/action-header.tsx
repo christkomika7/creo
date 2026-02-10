@@ -36,8 +36,8 @@ export default function ActionHeader({ title, url, type, component, secondCompon
             }
             break;
         case "modal":
-            if (!component || !title) {
-                throw new Error("Le composant et le titre sont requis au niveau du ActionHeader");
+            if (!component) {
+                throw new Error("Le composant est requis au niveau du ActionHeader");
             }
     }
 
@@ -62,7 +62,7 @@ export default function ActionHeader({ title, url, type, component, secondCompon
     }
 
     return (
-        <div className="flex justify-between">
+        <div className="grid grid-cols-2">
             <div className="flex items-center gap-x-4">
                 <Activity mode={paths.length > 1 ? "visible" : "hidden"}>
                     <Button variant="outline" onClick={() => router.history.back()}>
@@ -90,14 +90,14 @@ export default function ActionHeader({ title, url, type, component, secondCompon
                     </BreadcrumbList>
                 </Breadcrumb>
             </div>
-            <div className="flex items-center gap-x-4">
+            <div className="flex items-center justify-end gap-x-4">
                 {secondComponnet}
                 <Activity mode={type === "url" && title && url ? "visible" : "hidden"}>
                     <Link to={url}>
                         <Button variant="action" className="w-fit"> {hasIcon && <PlusIcon className="size-3.5" />} {title}</Button>
                     </Link>
                 </Activity>
-                <Activity mode={type === "modal" && title && component ? "visible" : "hidden"}>
+                <Activity mode={type === "modal" && component ? "visible" : "hidden"}>
                     {component}
                 </Activity>
             </div>

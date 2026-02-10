@@ -17,7 +17,7 @@ export default function Card({ icon, title, value, color, view, status = 'defaul
         <div className="bg-white flex items-center justify-between rounded-md p-4 shadow-md shadow-neutral-300/10">
             <div className="flex items-center gap-x-4">
                 <div className={cn(`p-2 size-16 flex justify-center items-center rounded-full ${color}`)}>
-                    <img src={icon} alt={title} className="size-7 object-contain object-center" />
+                    <img src={icon} alt={title} className="size-8 object-contain object-center" />
                 </div>
                 <div>
                     <p className="text-gray-500 text-sm">{title}</p>

@@ -141,13 +141,13 @@ export const columns: ColumnDef<Record<KeyType, string | number | Date>>[] = [
             return (
                 <div className="flex gap-x-2">
                     <Link to="/dashboard/contracts/edit-contract/$id"
-                        params={{ id: `edit_contract-${row.original.id}` as string }}
+                        params={{ id: `edit_contract-${row.original.id}` }}
                         search={{ type: row.original.contract }}
                     >
                         <Button variant="outline" className="size-7.5 rounded-lg"><Edit3Icon className="size-3.5" /></Button>
                     </Link>
                     <Link to="/dashboard/contracts/$id"
-                        params={{ id: `view_contract-${row.original.id}` as string }}
+                        params={{ id: `view_contract-${row.original.id}` }}
                         search={{ type: row.original.contract }}
                     >
                         <Button variant="secondary" className="size-7.5 rounded-lg"><EyeIcon className="size-3.5" /></Button>

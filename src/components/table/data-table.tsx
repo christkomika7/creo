@@ -31,6 +31,7 @@ import {
     PaginationPrevious,
 } from "@/components/ui/pagination"
 import { PAGE_SIZE } from "@/lib/constant";
+import PaginationInfo from "./pagination-info";
 
 
 type DataTableProps = {
@@ -132,7 +133,6 @@ export default function DataTable({ data, columns, filters, hasFilter = true, pl
         return range;
     };
 
-
     return (
         <div className="bg-white rounded-md gap-4 w-full">
             <Activity mode={hasFilter ? "visible" : "hidden"}>
@@ -194,11 +194,10 @@ export default function DataTable({ data, columns, filters, hasFilter = true, pl
                             </TableBody>
                         </Table>
                     </div>
-                    <Activity mode={table.getRowModel().rows.length > PAGE_SIZE ? 'visible' : 'hidden'}>
+                    <Activity mode={data.length > PAGE_SIZE ? 'visible' : 'hidden'}>
                         <div className="flex items-center justify-end space-x-2 py-4">
-                            <div className="text-muted-foreground flex-1 text-sm pl-4">
-                                {table.getRowModel().rows.length} résultats affichés sur {table.getFilteredRowModel().rows.length}
-                            </div>
+
+                            <PaginationInfo pagination={table.getState().pagination} total={table.getFilteredRowModel().rows.length} />
                             <div className="space-x-2 pr-8">
                                 <Pagination>
                                     <PaginationContent>

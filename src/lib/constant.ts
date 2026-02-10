@@ -12,4 +12,4 @@ export const ALLOWED_TYPES = [
 
 
 // PAGINATION
-export const PAGE_SIZE = 7;
+export const PAGE_SIZE = 5;

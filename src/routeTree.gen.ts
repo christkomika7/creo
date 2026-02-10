@@ -15,18 +15,22 @@ import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardUnitsIndexRouteImport } from './routes/dashboard/units/index'
 import { Route as DashboardTenantsIndexRouteImport } from './routes/dashboard/tenants/index'
 import { Route as DashboardReservationsIndexRouteImport } from './routes/dashboard/reservations/index'
+import { Route as DashboardReportsIndexRouteImport } from './routes/dashboard/reports/index'
 import { Route as DashboardRentalsIndexRouteImport } from './routes/dashboard/rentals/index'
 import { Route as DashboardPropertyManagementIndexRouteImport } from './routes/dashboard/property-management/index'
 import { Route as DashboardOwnersIndexRouteImport } from './routes/dashboard/owners/index'
 import { Route as DashboardInvoicesIndexRouteImport } from './routes/dashboard/invoices/index'
 import { Route as DashboardContractsIndexRouteImport } from './routes/dashboard/contracts/index'
 import { Route as DashboardBuildingsIndexRouteImport } from './routes/dashboard/buildings/index'
+import { Route as DashboardAccountingIndexRouteImport } from './routes/dashboard/accounting/index'
 import { Route as DashboardUnitsNewUnitRouteImport } from './routes/dashboard/units/new-unit'
 import { Route as DashboardUnitsIdRouteImport } from './routes/dashboard/units/$id'
 import { Route as DashboardTenantsNewTenantRouteImport } from './routes/dashboard/tenants/new-tenant'
 import { Route as DashboardTenantsIdRouteImport } from './routes/dashboard/tenants/$id'
 import { Route as DashboardReservationsNewReservationRouteImport } from './routes/dashboard/reservations/new-reservation'
 import { Route as DashboardReservationsIdRouteImport } from './routes/dashboard/reservations/$id'
+import { Route as DashboardReportsNewReportRouteImport } from './routes/dashboard/reports/new-report'
+import { Route as DashboardReportsIdRouteImport } from './routes/dashboard/reports/$id'
 import { Route as DashboardRentalsNewRentalRouteImport } from './routes/dashboard/rentals/new-rental'
 import { Route as DashboardRentalsIdRouteImport } from './routes/dashboard/rentals/$id'
 import { Route as DashboardPropertyManagementNewPropertyRouteImport } from './routes/dashboard/property-management/new-property'
@@ -39,15 +43,19 @@ import { Route as DashboardContractsNewContractRouteImport } from './routes/dash
 import { Route as DashboardContractsIdRouteImport } from './routes/dashboard/contracts/$id'
 import { Route as DashboardBuildingsNewBuildingRouteImport } from './routes/dashboard/buildings/new-building'
 import { Route as DashboardBuildingsIdRouteImport } from './routes/dashboard/buildings/$id'
+import { Route as DashboardAccountingNewAccountingRouteImport } from './routes/dashboard/accounting/new-accounting'
+import { Route as DashboardAccountingIdRouteImport } from './routes/dashboard/accounting/$id'
 import { Route as DashboardUnitsEditUnitIdRouteImport } from './routes/dashboard/units/edit-unit.$id'
 import { Route as DashboardTenantsEditTenantIdRouteImport } from './routes/dashboard/tenants/edit-tenant.$id'
 import { Route as DashboardReservationsEditReservationIdRouteImport } from './routes/dashboard/reservations/edit-reservation.$id'
+import { Route as DashboardReportsEditReportIdRouteImport } from './routes/dashboard/reports/edit-report.$id'
 import { Route as DashboardRentalsEditRentalIdRouteImport } from './routes/dashboard/rentals/edit-rental.$id'
 import { Route as DashboardPropertyManagementEditPropertyIdRouteImport } from './routes/dashboard/property-management/edit-property.$id'
 import { Route as DashboardOwnersEditOwnerIdRouteImport } from './routes/dashboard/owners/edit-owner.$id'
 import { Route as DashboardInvoicesEditInvoiceIdRouteImport } from './routes/dashboard/invoices/edit-invoice.$id'
 import { Route as DashboardContractsEditContractIdRouteImport } from './routes/dashboard/contracts/edit-contract.$id'
 import { Route as DashboardBuildingsEditBuildingIdRouteImport } from './routes/dashboard/buildings/edit-building.$id'
+import { Route as DashboardAccountingEditAccountingIdRouteImport } from './routes/dashboard/accounting/edit-accounting.$id'
 
 const DashboardRouteRoute = DashboardRouteRouteImport.update({
   id: '/dashboard',
@@ -80,6 +88,11 @@ const DashboardReservationsIndexRoute =
     path: '/reservations/',
     getParentRoute: () => DashboardRouteRoute,
   } as any)
+const DashboardReportsIndexRoute = DashboardReportsIndexRouteImport.update({
+  id: '/reports/',
+  path: '/reports/',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
 const DashboardRentalsIndexRoute = DashboardRentalsIndexRouteImport.update({
   id: '/rentals/',
   path: '/rentals/',
@@ -111,6 +124,12 @@ const DashboardBuildingsIndexRoute = DashboardBuildingsIndexRouteImport.update({
   path: '/buildings/',
   getParentRoute: () => DashboardRouteRoute,
 } as any)
+const DashboardAccountingIndexRoute =
+  DashboardAccountingIndexRouteImport.update({
+    id: '/accounting/',
+    path: '/accounting/',
+    getParentRoute: () => DashboardRouteRoute,
+  } as any)
 const DashboardUnitsNewUnitRoute = DashboardUnitsNewUnitRouteImport.update({
   id: '/units/new-unit',
   path: '/units/new-unit',
@@ -141,6 +160,17 @@ const DashboardReservationsNewReservationRoute =
 const DashboardReservationsIdRoute = DashboardReservationsIdRouteImport.update({
   id: '/reservations/$id',
   path: '/reservations/$id',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
+const DashboardReportsNewReportRoute =
+  DashboardReportsNewReportRouteImport.update({
+    id: '/reports/new-report',
+    path: '/reports/new-report',
+    getParentRoute: () => DashboardRouteRoute,
+  } as any)
+const DashboardReportsIdRoute = DashboardReportsIdRouteImport.update({
+  id: '/reports/$id',
+  path: '/reports/$id',
   getParentRoute: () => DashboardRouteRoute,
 } as any)
 const DashboardRentalsNewRentalRoute =
@@ -209,6 +239,17 @@ const DashboardBuildingsIdRoute = DashboardBuildingsIdRouteImport.update({
   path: '/buildings/$id',
   getParentRoute: () => DashboardRouteRoute,
 } as any)
+const DashboardAccountingNewAccountingRoute =
+  DashboardAccountingNewAccountingRouteImport.update({
+    id: '/accounting/new-accounting',
+    path: '/accounting/new-accounting',
+    getParentRoute: () => DashboardRouteRoute,
+  } as any)
+const DashboardAccountingIdRoute = DashboardAccountingIdRouteImport.update({
+  id: '/accounting/$id',
+  path: '/accounting/$id',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
 const DashboardUnitsEditUnitIdRoute =
   DashboardUnitsEditUnitIdRouteImport.update({
     id: '/units/edit-unit/$id',
@@ -225,6 +266,12 @@ const DashboardReservationsEditReservationIdRoute =
   DashboardReservationsEditReservationIdRouteImport.update({
     id: '/reservations/edit-reservation/$id',
     path: '/reservations/edit-reservation/$id',
+    getParentRoute: () => DashboardRouteRoute,
+  } as any)
+const DashboardReportsEditReportIdRoute =
+  DashboardReportsEditReportIdRouteImport.update({
+    id: '/reports/edit-report/$id',
+    path: '/reports/edit-report/$id',
     getParentRoute: () => DashboardRouteRoute,
   } as any)
 const DashboardRentalsEditRentalIdRoute =
@@ -263,11 +310,19 @@ const DashboardBuildingsEditBuildingIdRoute =
     path: '/buildings/edit-building/$id',
     getParentRoute: () => DashboardRouteRoute,
   } as any)
+const DashboardAccountingEditAccountingIdRoute =
+  DashboardAccountingEditAccountingIdRouteImport.update({
+    id: '/accounting/edit-accounting/$id',
+    path: '/accounting/edit-accounting/$id',
+    getParentRoute: () => DashboardRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRouteRouteWithChildren
   '/dashboard/': typeof DashboardIndexRoute
+  '/dashboard/accounting/$id': typeof DashboardAccountingIdRoute
+  '/dashboard/accounting/new-accounting': typeof DashboardAccountingNewAccountingRoute
   '/dashboard/buildings/$id': typeof DashboardBuildingsIdRoute
   '/dashboard/buildings/new-building': typeof DashboardBuildingsNewBuildingRoute
   '/dashboard/contracts/$id': typeof DashboardContractsIdRoute
@@ -280,27 +335,33 @@ export interface FileRoutesByFullPath {
   '/dashboard/property-management/new-property': typeof DashboardPropertyManagementNewPropertyRoute
   '/dashboard/rentals/$id': typeof DashboardRentalsIdRoute
   '/dashboard/rentals/new-rental': typeof DashboardRentalsNewRentalRoute
+  '/dashboard/reports/$id': typeof DashboardReportsIdRoute
+  '/dashboard/reports/new-report': typeof DashboardReportsNewReportRoute
   '/dashboard/reservations/$id': typeof DashboardReservationsIdRoute
   '/dashboard/reservations/new-reservation': typeof DashboardReservationsNewReservationRoute
   '/dashboard/tenants/$id': typeof DashboardTenantsIdRoute
   '/dashboard/tenants/new-tenant': typeof DashboardTenantsNewTenantRoute
   '/dashboard/units/$id': typeof DashboardUnitsIdRoute
   '/dashboard/units/new-unit': typeof DashboardUnitsNewUnitRoute
+  '/dashboard/accounting': typeof DashboardAccountingIndexRoute
   '/dashboard/buildings': typeof DashboardBuildingsIndexRoute
   '/dashboard/contracts': typeof DashboardContractsIndexRoute
   '/dashboard/invoices': typeof DashboardInvoicesIndexRoute
   '/dashboard/owners': typeof DashboardOwnersIndexRoute
   '/dashboard/property-management': typeof DashboardPropertyManagementIndexRoute
   '/dashboard/rentals': typeof DashboardRentalsIndexRoute
+  '/dashboard/reports': typeof DashboardReportsIndexRoute
   '/dashboard/reservations': typeof DashboardReservationsIndexRoute
   '/dashboard/tenants': typeof DashboardTenantsIndexRoute
   '/dashboard/units': typeof DashboardUnitsIndexRoute
+  '/dashboard/accounting/edit-accounting/$id': typeof DashboardAccountingEditAccountingIdRoute
   '/dashboard/buildings/edit-building/$id': typeof DashboardBuildingsEditBuildingIdRoute
   '/dashboard/contracts/edit-contract/$id': typeof DashboardContractsEditContractIdRoute
   '/dashboard/invoices/edit-invoice/$id': typeof DashboardInvoicesEditInvoiceIdRoute
   '/dashboard/owners/edit-owner/$id': typeof DashboardOwnersEditOwnerIdRoute
   '/dashboard/property-management/edit-property/$id': typeof DashboardPropertyManagementEditPropertyIdRoute
   '/dashboard/rentals/edit-rental/$id': typeof DashboardRentalsEditRentalIdRoute
+  '/dashboard/reports/edit-report/$id': typeof DashboardReportsEditReportIdRoute
   '/dashboard/reservations/edit-reservation/$id': typeof DashboardReservationsEditReservationIdRoute
   '/dashboard/tenants/edit-tenant/$id': typeof DashboardTenantsEditTenantIdRoute
   '/dashboard/units/edit-unit/$id': typeof DashboardUnitsEditUnitIdRoute
@@ -308,6 +369,8 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardIndexRoute
+  '/dashboard/accounting/$id': typeof DashboardAccountingIdRoute
+  '/dashboard/accounting/new-accounting': typeof DashboardAccountingNewAccountingRoute
   '/dashboard/buildings/$id': typeof DashboardBuildingsIdRoute
   '/dashboard/buildings/new-building': typeof DashboardBuildingsNewBuildingRoute
   '/dashboard/contracts/$id': typeof DashboardContractsIdRoute
@@ -320,27 +383,33 @@ export interface FileRoutesByTo {
   '/dashboard/property-management/new-property': typeof DashboardPropertyManagementNewPropertyRoute
   '/dashboard/rentals/$id': typeof DashboardRentalsIdRoute
   '/dashboard/rentals/new-rental': typeof DashboardRentalsNewRentalRoute
+  '/dashboard/reports/$id': typeof DashboardReportsIdRoute
+  '/dashboard/reports/new-report': typeof DashboardReportsNewReportRoute
   '/dashboard/reservations/$id': typeof DashboardReservationsIdRoute
   '/dashboard/reservations/new-reservation': typeof DashboardReservationsNewReservationRoute
   '/dashboard/tenants/$id': typeof DashboardTenantsIdRoute
   '/dashboard/tenants/new-tenant': typeof DashboardTenantsNewTenantRoute
   '/dashboard/units/$id': typeof DashboardUnitsIdRoute
   '/dashboard/units/new-unit': typeof DashboardUnitsNewUnitRoute
+  '/dashboard/accounting': typeof DashboardAccountingIndexRoute
   '/dashboard/buildings': typeof DashboardBuildingsIndexRoute
   '/dashboard/contracts': typeof DashboardContractsIndexRoute
   '/dashboard/invoices': typeof DashboardInvoicesIndexRoute
   '/dashboard/owners': typeof DashboardOwnersIndexRoute
   '/dashboard/property-management': typeof DashboardPropertyManagementIndexRoute
   '/dashboard/rentals': typeof DashboardRentalsIndexRoute
+  '/dashboard/reports': typeof DashboardReportsIndexRoute
   '/dashboard/reservations': typeof DashboardReservationsIndexRoute
   '/dashboard/tenants': typeof DashboardTenantsIndexRoute
   '/dashboard/units': typeof DashboardUnitsIndexRoute
+  '/dashboard/accounting/edit-accounting/$id': typeof DashboardAccountingEditAccountingIdRoute
   '/dashboard/buildings/edit-building/$id': typeof DashboardBuildingsEditBuildingIdRoute
   '/dashboard/contracts/edit-contract/$id': typeof DashboardContractsEditContractIdRoute
   '/dashboard/invoices/edit-invoice/$id': typeof DashboardInvoicesEditInvoiceIdRoute
   '/dashboard/owners/edit-owner/$id': typeof DashboardOwnersEditOwnerIdRoute
   '/dashboard/property-management/edit-property/$id': typeof DashboardPropertyManagementEditPropertyIdRoute
   '/dashboard/rentals/edit-rental/$id': typeof DashboardRentalsEditRentalIdRoute
+  '/dashboard/reports/edit-report/$id': typeof DashboardReportsEditReportIdRoute
   '/dashboard/reservations/edit-reservation/$id': typeof DashboardReservationsEditReservationIdRoute
   '/dashboard/tenants/edit-tenant/$id': typeof DashboardTenantsEditTenantIdRoute
   '/dashboard/units/edit-unit/$id': typeof DashboardUnitsEditUnitIdRoute
@@ -350,6 +419,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRouteRouteWithChildren
   '/dashboard/': typeof DashboardIndexRoute
+  '/dashboard/accounting/$id': typeof DashboardAccountingIdRoute
+  '/dashboard/accounting/new-accounting': typeof DashboardAccountingNewAccountingRoute
   '/dashboard/buildings/$id': typeof DashboardBuildingsIdRoute
   '/dashboard/buildings/new-building': typeof DashboardBuildingsNewBuildingRoute
   '/dashboard/contracts/$id': typeof DashboardContractsIdRoute
@@ -362,27 +433,33 @@ export interface FileRoutesById {
   '/dashboard/property-management/new-property': typeof DashboardPropertyManagementNewPropertyRoute
   '/dashboard/rentals/$id': typeof DashboardRentalsIdRoute
   '/dashboard/rentals/new-rental': typeof DashboardRentalsNewRentalRoute
+  '/dashboard/reports/$id': typeof DashboardReportsIdRoute
+  '/dashboard/reports/new-report': typeof DashboardReportsNewReportRoute
   '/dashboard/reservations/$id': typeof DashboardReservationsIdRoute
   '/dashboard/reservations/new-reservation': typeof DashboardReservationsNewReservationRoute
   '/dashboard/tenants/$id': typeof DashboardTenantsIdRoute
   '/dashboard/tenants/new-tenant': typeof DashboardTenantsNewTenantRoute
   '/dashboard/units/$id': typeof DashboardUnitsIdRoute
   '/dashboard/units/new-unit': typeof DashboardUnitsNewUnitRoute
+  '/dashboard/accounting/': typeof DashboardAccountingIndexRoute
   '/dashboard/buildings/': typeof DashboardBuildingsIndexRoute
   '/dashboard/contracts/': typeof DashboardContractsIndexRoute
   '/dashboard/invoices/': typeof DashboardInvoicesIndexRoute
   '/dashboard/owners/': typeof DashboardOwnersIndexRoute
   '/dashboard/property-management/': typeof DashboardPropertyManagementIndexRoute
   '/dashboard/rentals/': typeof DashboardRentalsIndexRoute
+  '/dashboard/reports/': typeof DashboardReportsIndexRoute
   '/dashboard/reservations/': typeof DashboardReservationsIndexRoute
   '/dashboard/tenants/': typeof DashboardTenantsIndexRoute
   '/dashboard/units/': typeof DashboardUnitsIndexRoute
+  '/dashboard/accounting/edit-accounting/$id': typeof DashboardAccountingEditAccountingIdRoute
   '/dashboard/buildings/edit-building/$id': typeof DashboardBuildingsEditBuildingIdRoute
   '/dashboard/contracts/edit-contract/$id': typeof DashboardContractsEditContractIdRoute
   '/dashboard/invoices/edit-invoice/$id': typeof DashboardInvoicesEditInvoiceIdRoute
   '/dashboard/owners/edit-owner/$id': typeof DashboardOwnersEditOwnerIdRoute
   '/dashboard/property-management/edit-property/$id': typeof DashboardPropertyManagementEditPropertyIdRoute
   '/dashboard/rentals/edit-rental/$id': typeof DashboardRentalsEditRentalIdRoute
+  '/dashboard/reports/edit-report/$id': typeof DashboardReportsEditReportIdRoute
   '/dashboard/reservations/edit-reservation/$id': typeof DashboardReservationsEditReservationIdRoute
   '/dashboard/tenants/edit-tenant/$id': typeof DashboardTenantsEditTenantIdRoute
   '/dashboard/units/edit-unit/$id': typeof DashboardUnitsEditUnitIdRoute
@@ -393,6 +470,8 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/dashboard/'
+    | '/dashboard/accounting/$id'
+    | '/dashboard/accounting/new-accounting'
     | '/dashboard/buildings/$id'
     | '/dashboard/buildings/new-building'
     | '/dashboard/contracts/$id'
@@ -405,27 +484,33 @@ export interface FileRouteTypes {
     | '/dashboard/property-management/new-property'
     | '/dashboard/rentals/$id'
     | '/dashboard/rentals/new-rental'
+    | '/dashboard/reports/$id'
+    | '/dashboard/reports/new-report'
     | '/dashboard/reservations/$id'
     | '/dashboard/reservations/new-reservation'
     | '/dashboard/tenants/$id'
     | '/dashboard/tenants/new-tenant'
     | '/dashboard/units/$id'
     | '/dashboard/units/new-unit'
+    | '/dashboard/accounting'
     | '/dashboard/buildings'
     | '/dashboard/contracts'
     | '/dashboard/invoices'
     | '/dashboard/owners'
     | '/dashboard/property-management'
     | '/dashboard/rentals'
+    | '/dashboard/reports'
     | '/dashboard/reservations'
     | '/dashboard/tenants'
     | '/dashboard/units'
+    | '/dashboard/accounting/edit-accounting/$id'
     | '/dashboard/buildings/edit-building/$id'
     | '/dashboard/contracts/edit-contract/$id'
     | '/dashboard/invoices/edit-invoice/$id'
     | '/dashboard/owners/edit-owner/$id'
     | '/dashboard/property-management/edit-property/$id'
     | '/dashboard/rentals/edit-rental/$id'
+    | '/dashboard/reports/edit-report/$id'
     | '/dashboard/reservations/edit-reservation/$id'
     | '/dashboard/tenants/edit-tenant/$id'
     | '/dashboard/units/edit-unit/$id'
@@ -433,6 +518,8 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/dashboard'
+    | '/dashboard/accounting/$id'
+    | '/dashboard/accounting/new-accounting'
     | '/dashboard/buildings/$id'
     | '/dashboard/buildings/new-building'
     | '/dashboard/contracts/$id'
@@ -445,27 +532,33 @@ export interface FileRouteTypes {
     | '/dashboard/property-management/new-property'
     | '/dashboard/rentals/$id'
     | '/dashboard/rentals/new-rental'
+    | '/dashboard/reports/$id'
+    | '/dashboard/reports/new-report'
     | '/dashboard/reservations/$id'
     | '/dashboard/reservations/new-reservation'
     | '/dashboard/tenants/$id'
     | '/dashboard/tenants/new-tenant'
     | '/dashboard/units/$id'
     | '/dashboard/units/new-unit'
+    | '/dashboard/accounting'
     | '/dashboard/buildings'
     | '/dashboard/contracts'
     | '/dashboard/invoices'
     | '/dashboard/owners'
     | '/dashboard/property-management'
     | '/dashboard/rentals'
+    | '/dashboard/reports'
     | '/dashboard/reservations'
     | '/dashboard/tenants'
     | '/dashboard/units'
+    | '/dashboard/accounting/edit-accounting/$id'
     | '/dashboard/buildings/edit-building/$id'
     | '/dashboard/contracts/edit-contract/$id'
     | '/dashboard/invoices/edit-invoice/$id'
     | '/dashboard/owners/edit-owner/$id'
     | '/dashboard/property-management/edit-property/$id'
     | '/dashboard/rentals/edit-rental/$id'
+    | '/dashboard/reports/edit-report/$id'
     | '/dashboard/reservations/edit-reservation/$id'
     | '/dashboard/tenants/edit-tenant/$id'
     | '/dashboard/units/edit-unit/$id'
@@ -474,6 +567,8 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/dashboard/'
+    | '/dashboard/accounting/$id'
+    | '/dashboard/accounting/new-accounting'
     | '/dashboard/buildings/$id'
     | '/dashboard/buildings/new-building'
     | '/dashboard/contracts/$id'
@@ -486,27 +581,33 @@ export interface FileRouteTypes {
     | '/dashboard/property-management/new-property'
     | '/dashboard/rentals/$id'
     | '/dashboard/rentals/new-rental'
+    | '/dashboard/reports/$id'
+    | '/dashboard/reports/new-report'
     | '/dashboard/reservations/$id'
     | '/dashboard/reservations/new-reservation'
     | '/dashboard/tenants/$id'
     | '/dashboard/tenants/new-tenant'
     | '/dashboard/units/$id'
     | '/dashboard/units/new-unit'
+    | '/dashboard/accounting/'
     | '/dashboard/buildings/'
     | '/dashboard/contracts/'
     | '/dashboard/invoices/'
     | '/dashboard/owners/'
     | '/dashboard/property-management/'
     | '/dashboard/rentals/'
+    | '/dashboard/reports/'
     | '/dashboard/reservations/'
     | '/dashboard/tenants/'
     | '/dashboard/units/'
+    | '/dashboard/accounting/edit-accounting/$id'
     | '/dashboard/buildings/edit-building/$id'
     | '/dashboard/contracts/edit-contract/$id'
     | '/dashboard/invoices/edit-invoice/$id'
     | '/dashboard/owners/edit-owner/$id'
     | '/dashboard/property-management/edit-property/$id'
     | '/dashboard/rentals/edit-rental/$id'
+    | '/dashboard/reports/edit-report/$id'
     | '/dashboard/reservations/edit-reservation/$id'
     | '/dashboard/tenants/edit-tenant/$id'
     | '/dashboard/units/edit-unit/$id'
@@ -561,6 +662,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardReservationsIndexRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
+    '/dashboard/reports/': {
+      id: '/dashboard/reports/'
+      path: '/reports'
+      fullPath: '/dashboard/reports'
+      preLoaderRoute: typeof DashboardReportsIndexRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
     '/dashboard/rentals/': {
       id: '/dashboard/rentals/'
       path: '/rentals'
@@ -603,6 +711,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardBuildingsIndexRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
+    '/dashboard/accounting/': {
+      id: '/dashboard/accounting/'
+      path: '/accounting'
+      fullPath: '/dashboard/accounting'
+      preLoaderRoute: typeof DashboardAccountingIndexRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
     '/dashboard/units/new-unit': {
       id: '/dashboard/units/new-unit'
       path: '/units/new-unit'
@@ -643,6 +758,20 @@ declare module '@tanstack/react-router' {
       path: '/reservations/$id'
       fullPath: '/dashboard/reservations/$id'
       preLoaderRoute: typeof DashboardReservationsIdRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
+    '/dashboard/reports/new-report': {
+      id: '/dashboard/reports/new-report'
+      path: '/reports/new-report'
+      fullPath: '/dashboard/reports/new-report'
+      preLoaderRoute: typeof DashboardReportsNewReportRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
+    '/dashboard/reports/$id': {
+      id: '/dashboard/reports/$id'
+      path: '/reports/$id'
+      fullPath: '/dashboard/reports/$id'
+      preLoaderRoute: typeof DashboardReportsIdRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
     '/dashboard/rentals/new-rental': {
@@ -729,6 +858,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardBuildingsIdRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
+    '/dashboard/accounting/new-accounting': {
+      id: '/dashboard/accounting/new-accounting'
+      path: '/accounting/new-accounting'
+      fullPath: '/dashboard/accounting/new-accounting'
+      preLoaderRoute: typeof DashboardAccountingNewAccountingRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
+    '/dashboard/accounting/$id': {
+      id: '/dashboard/accounting/$id'
+      path: '/accounting/$id'
+      fullPath: '/dashboard/accounting/$id'
+      preLoaderRoute: typeof DashboardAccountingIdRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
     '/dashboard/units/edit-unit/$id': {
       id: '/dashboard/units/edit-unit/$id'
       path: '/units/edit-unit/$id'
@@ -748,6 +891,13 @@ declare module '@tanstack/react-router' {
       path: '/reservations/edit-reservation/$id'
       fullPath: '/dashboard/reservations/edit-reservation/$id'
       preLoaderRoute: typeof DashboardReservationsEditReservationIdRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
+    '/dashboard/reports/edit-report/$id': {
+      id: '/dashboard/reports/edit-report/$id'
+      path: '/reports/edit-report/$id'
+      fullPath: '/dashboard/reports/edit-report/$id'
+      preLoaderRoute: typeof DashboardReportsEditReportIdRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
     '/dashboard/rentals/edit-rental/$id': {
@@ -792,11 +942,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardBuildingsEditBuildingIdRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
+    '/dashboard/accounting/edit-accounting/$id': {
+      id: '/dashboard/accounting/edit-accounting/$id'
+      path: '/accounting/edit-accounting/$id'
+      fullPath: '/dashboard/accounting/edit-accounting/$id'
+      preLoaderRoute: typeof DashboardAccountingEditAccountingIdRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
   }
 }
 
 interface DashboardRouteRouteChildren {
   DashboardIndexRoute: typeof DashboardIndexRoute
+  DashboardAccountingIdRoute: typeof DashboardAccountingIdRoute
+  DashboardAccountingNewAccountingRoute: typeof DashboardAccountingNewAccountingRoute
   DashboardBuildingsIdRoute: typeof DashboardBuildingsIdRoute
   DashboardBuildingsNewBuildingRoute: typeof DashboardBuildingsNewBuildingRoute
   DashboardContractsIdRoute: typeof DashboardContractsIdRoute
@@ -809,27 +968,33 @@ interface DashboardRouteRouteChildren {
   DashboardPropertyManagementNewPropertyRoute: typeof DashboardPropertyManagementNewPropertyRoute
   DashboardRentalsIdRoute: typeof DashboardRentalsIdRoute
   DashboardRentalsNewRentalRoute: typeof DashboardRentalsNewRentalRoute
+  DashboardReportsIdRoute: typeof DashboardReportsIdRoute
+  DashboardReportsNewReportRoute: typeof DashboardReportsNewReportRoute
   DashboardReservationsIdRoute: typeof DashboardReservationsIdRoute
   DashboardReservationsNewReservationRoute: typeof DashboardReservationsNewReservationRoute
   DashboardTenantsIdRoute: typeof DashboardTenantsIdRoute
   DashboardTenantsNewTenantRoute: typeof DashboardTenantsNewTenantRoute
   DashboardUnitsIdRoute: typeof DashboardUnitsIdRoute
   DashboardUnitsNewUnitRoute: typeof DashboardUnitsNewUnitRoute
+  DashboardAccountingIndexRoute: typeof DashboardAccountingIndexRoute
   DashboardBuildingsIndexRoute: typeof DashboardBuildingsIndexRoute
   DashboardContractsIndexRoute: typeof DashboardContractsIndexRoute
   DashboardInvoicesIndexRoute: typeof DashboardInvoicesIndexRoute
   DashboardOwnersIndexRoute: typeof DashboardOwnersIndexRoute
   DashboardPropertyManagementIndexRoute: typeof DashboardPropertyManagementIndexRoute
   DashboardRentalsIndexRoute: typeof DashboardRentalsIndexRoute
+  DashboardReportsIndexRoute: typeof DashboardReportsIndexRoute
   DashboardReservationsIndexRoute: typeof DashboardReservationsIndexRoute
   DashboardTenantsIndexRoute: typeof DashboardTenantsIndexRoute
   DashboardUnitsIndexRoute: typeof DashboardUnitsIndexRoute
+  DashboardAccountingEditAccountingIdRoute: typeof DashboardAccountingEditAccountingIdRoute
   DashboardBuildingsEditBuildingIdRoute: typeof DashboardBuildingsEditBuildingIdRoute
   DashboardContractsEditContractIdRoute: typeof DashboardContractsEditContractIdRoute
   DashboardInvoicesEditInvoiceIdRoute: typeof DashboardInvoicesEditInvoiceIdRoute
   DashboardOwnersEditOwnerIdRoute: typeof DashboardOwnersEditOwnerIdRoute
   DashboardPropertyManagementEditPropertyIdRoute: typeof DashboardPropertyManagementEditPropertyIdRoute
   DashboardRentalsEditRentalIdRoute: typeof DashboardRentalsEditRentalIdRoute
+  DashboardReportsEditReportIdRoute: typeof DashboardReportsEditReportIdRoute
   DashboardReservationsEditReservationIdRoute: typeof DashboardReservationsEditReservationIdRoute
   DashboardTenantsEditTenantIdRoute: typeof DashboardTenantsEditTenantIdRoute
   DashboardUnitsEditUnitIdRoute: typeof DashboardUnitsEditUnitIdRoute
@@ -837,6 +1002,8 @@ interface DashboardRouteRouteChildren {
 
 const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardIndexRoute: DashboardIndexRoute,
+  DashboardAccountingIdRoute: DashboardAccountingIdRoute,
+  DashboardAccountingNewAccountingRoute: DashboardAccountingNewAccountingRoute,
   DashboardBuildingsIdRoute: DashboardBuildingsIdRoute,
   DashboardBuildingsNewBuildingRoute: DashboardBuildingsNewBuildingRoute,
   DashboardContractsIdRoute: DashboardContractsIdRoute,
@@ -850,6 +1017,8 @@ const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
     DashboardPropertyManagementNewPropertyRoute,
   DashboardRentalsIdRoute: DashboardRentalsIdRoute,
   DashboardRentalsNewRentalRoute: DashboardRentalsNewRentalRoute,
+  DashboardReportsIdRoute: DashboardReportsIdRoute,
+  DashboardReportsNewReportRoute: DashboardReportsNewReportRoute,
   DashboardReservationsIdRoute: DashboardReservationsIdRoute,
   DashboardReservationsNewReservationRoute:
     DashboardReservationsNewReservationRoute,
@@ -857,15 +1026,19 @@ const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardTenantsNewTenantRoute: DashboardTenantsNewTenantRoute,
   DashboardUnitsIdRoute: DashboardUnitsIdRoute,
   DashboardUnitsNewUnitRoute: DashboardUnitsNewUnitRoute,
+  DashboardAccountingIndexRoute: DashboardAccountingIndexRoute,
   DashboardBuildingsIndexRoute: DashboardBuildingsIndexRoute,
   DashboardContractsIndexRoute: DashboardContractsIndexRoute,
   DashboardInvoicesIndexRoute: DashboardInvoicesIndexRoute,
   DashboardOwnersIndexRoute: DashboardOwnersIndexRoute,
   DashboardPropertyManagementIndexRoute: DashboardPropertyManagementIndexRoute,
   DashboardRentalsIndexRoute: DashboardRentalsIndexRoute,
+  DashboardReportsIndexRoute: DashboardReportsIndexRoute,
   DashboardReservationsIndexRoute: DashboardReservationsIndexRoute,
   DashboardTenantsIndexRoute: DashboardTenantsIndexRoute,
   DashboardUnitsIndexRoute: DashboardUnitsIndexRoute,
+  DashboardAccountingEditAccountingIdRoute:
+    DashboardAccountingEditAccountingIdRoute,
   DashboardBuildingsEditBuildingIdRoute: DashboardBuildingsEditBuildingIdRoute,
   DashboardContractsEditContractIdRoute: DashboardContractsEditContractIdRoute,
   DashboardInvoicesEditInvoiceIdRoute: DashboardInvoicesEditInvoiceIdRoute,
@@ -873,6 +1046,7 @@ const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardPropertyManagementEditPropertyIdRoute:
     DashboardPropertyManagementEditPropertyIdRoute,
   DashboardRentalsEditRentalIdRoute: DashboardRentalsEditRentalIdRoute,
+  DashboardReportsEditReportIdRoute: DashboardReportsEditReportIdRoute,
   DashboardReservationsEditReservationIdRoute:
     DashboardReservationsEditReservationIdRoute,
   DashboardTenantsEditTenantIdRoute: DashboardTenantsEditTenantIdRoute,

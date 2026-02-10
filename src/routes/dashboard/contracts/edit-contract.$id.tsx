@@ -1,3 +1,5 @@
+import EditContract from '@/components/forms/contracts/edit'
+import ActionHeader from '@/components/header/action-header'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/dashboard/contracts/edit-contract/$id')({
@@ -5,5 +7,8 @@ export const Route = createFileRoute('/dashboard/contracts/edit-contract/$id')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/dashboard/contracts/edit-contract/$id"!</div>
+  return <div className='space-y-6'>
+    <ActionHeader />
+    <EditContract />
+  </div>
 }

@@ -1,0 +1,11 @@
+import { createFileRoute } from '@tanstack/react-router'
+
+export const Route = createFileRoute(
+  '/dashboard/service-providers/edit-service/$id',
+)({
+  component: RouteComponent,
+})
+
+function RouteComponent() {
+  return <div>Hello "/dashboard/service-providers/edit-service/$id"!</div>
+}

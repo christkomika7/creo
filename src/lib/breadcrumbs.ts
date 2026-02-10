@@ -9,7 +9,12 @@ export type BreadcrumbKey =
     "invoices" | "new-invoice" | "edit_invoice" | "view_invoice" |
     "contracts" | "new-contract" | "edit_contract" | "view_contract" |
     "reports" | "new-report" | "edit_report" | "view_report" |
-    "accounting" | "new-accounting" | "edit_accounting" | "view_accounting";
+    "accounting" | "new-accounting" | "edit_accounting" | "view_accounting" |
+    "appointments" | "new-appointment" | "edit_appointment" | "view_appointment" |
+    "service-providers" | "new-service" | "edit_service" | "view_service" |
+    "communications" | "new-communication" | "edit_communication" | "view_communication" |
+    "settings";
+
 
 
 
@@ -80,4 +85,25 @@ export const breadcrumbs: Record<BreadcrumbKey, string> = {
     'new-accounting': "Nouvelle comptabilité",
     'edit_accounting': "Modification de la comptabilité",
     'view_accounting': "Information sur la comptabilité",
+
+    // Appointments
+    'appointments': "Rendez-vous",
+    'new-appointment': "Nouveau rendez-vous",
+    'edit_appointment': "Modification du rendez-vous",
+    'view_appointment': "Information sur le rendez-vous",
+
+    // Service Providers
+    'service-providers': "Fournisseurs de services",
+    'new-service': "Nouveau fournisseur de services",
+    'edit_service': "Modification du fournisseur de services",
+    'view_service': "Information sur le fournisseur de services",
+
+    // Communications
+    'communications': "Communications",
+    'new-communication': "Nouvelle communication",
+    'edit_communication': "Modification de la communication",
+    'view_communication': "Information sur la communication",
+
+    // Settings
+    'settings': "Paramètres",
 }

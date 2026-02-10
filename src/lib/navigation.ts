@@ -89,13 +89,13 @@ export const sidebar = [
         id: 15,
         icon: MessagesSquareIcon,
         title: "Communication",
-        path: "/dashboard/communication"
+        path: "/dashboard/communications"
     },
     {
         id: 16,
         icon: CogIcon,
         title: "Paramètres",
-        path: "/dashboard/setting"
+        path: "/dashboard/settings"
     },
 
 ]
